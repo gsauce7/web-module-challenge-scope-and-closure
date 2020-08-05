@@ -27,21 +27,24 @@ There are layers upon layers of nested functions within the game of baseball. Yo
 
 ### Task 1 - Set Up Project and Tests
 
-1. Fork repo and add TL as collaborator on Github
-2. Clone _your_ fork (not Lambda's repo by mistake!)
-3. `cd` into your newly cloned repository
-4. Create a new branch by typing `git checkout -b <firstName-lastName>`
-5. Work on your branch, push commits and create PR as usual
+1. [x] Fork repo and add TL as collaborator on Github
+2. [x] Clone _your_ fork (not Lambda's repo by mistake!)
+3. [x] `cd` into your newly cloned repository
+4. [x] Create a new branch by typing `git checkout -b <firstName-lastName>`
+5. [x] Work on your branch, push commits and create PR as usual
 
 ### Task 2a - MVP code
 
-Find the file `index.js` and complete the tasks.
+[x] Find the file `index.js` and complete the tasks.
 
 ### Task 2b - Written questions
 
-Edit the `ReadMe` file with your answers.
+[x] Edit the `ReadMe` file with your answers.
 
-1. In your own words, define closure (1-2 sentences).
+1. In your own words, define closure (1-2 sentences). 
+Lexical scoping describes how the JavaScript engine uses the location of the variable in the code to determine where that variable is available. A closure is a combination of a function and its ability to remember variables in the outer scope. If a function has everything in needs to run from within the function and if necesssary, in the lexical scope, it is a closure. 
+
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,11 +66,19 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+This example shows a function nested in a function. The function personalDice returns an unnamed, nested function, and that function simulates a random roll between 1 and 6 and stores it in the variable newRoll, then logs a message to the console using both the newRoll variable value and the name parameter in the parent function. An explicit argument such as "Dan" is passed in when personalDice is called, or the function would not work and would not be a closure. 
+
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change? 
+
+The name chosen (for example, "Dan"), stays the same but the newRoll value changes each time it is referenced because Math.random runs a "random" calculation. 
+
 c. What is the lexical scope of `newRoll`? 
+
+The lexical scope of newRoll is the inner function. It cannot be accessed directly by anything at a higher level (further up) but CAN be indirectly accessed each time by the outer function calling the inner function and returning the result. 
 
 ### Task 2c - Exit Ticket
 
+[x]
 Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/WjSzNh9gDrD8Xn8hw/enY3yPRP3nEm7E).
 
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
@@ -108,6 +119,6 @@ addSix(21); // returns 27
 
 Follow these steps for completing your project.
 
-- [ ] Submit a pull request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-- [ ] Add your Team Lead as a reviewer on the pull request
+- [x] Submit a pull request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+- [x] Add your Team Lead as a reviewer on the pull request
 - [ ] Your Team Lead will count the project as complete by merging the branch back into master
